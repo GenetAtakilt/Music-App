@@ -1,0 +1,105 @@
+.dark-mode-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+
+  position: absolute;
+  bottom: -75px;
+  right: 2rem;
+  color: rgb(165, 165, 165);
+  z-index: 1;
+
+  transition: transform 0.6s ease;
+
+  animation: 1.2s ease-out 0s 1 fadeIn;
+  svg {
+    transition: transform 0.8s ease;
+    font-size: 2em;
+  }
+}
+.dark-mode-container:hover {
+  color: rgb(209, 209, 209);
+  svg {
+    font-size: 2.05em;
+  }
+}
+.moon {
+  transform: rotate(-180deg);
+  svg {
+    transform: rotate(-195deg);
+  }
+}
+
+.dark-mode-active {
+  background-color: rgba(24, 24, 24, 1);
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  nav {
+    background-color: rgba(18, 18, 18, 1);
+    button {
+      color: rgba(179, 179, 179, 0.8);
+      border: 1px solid rgba(179, 179, 179, 0.8);
+    }
+    button:hover {
+      color: rgba(188, 188, 188, 0.8);
+      border: 1px solid rgba(188, 188, 188, 0.8);
+    }
+  }
+  .song-container {
+    // background-color: rgba(24, 24, 24, 1);
+    transition: all 0.4s ease-in;
+  }
+  .player {
+    // background-color: rgba(24, 24, 24, 1);
+    transition: all 0.4s ease-in;
+    .time-control {
+      p {
+        color: rgba(179, 179, 179, 0.8);
+      }
+    }
+    .volume-control {
+      color: rgba(179, 179, 179, 0.8);
+    }
+    .play-control {
+      color: rgba(179, 179, 179, 1);
+    }
+  }
+  .library {
+    background-color: rgba(18, 18, 18, 1);
+    h2 {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    //transition: all 0.4s ease-in;
+    .library-songs {
+      background-color: rgba(40, 40, 40, 1);
+      transition: all 0.4s ease-in;
+    }
+
+    .selected {
+      background-color: rgba(24, 24, 24, 1);
+      transition: all 0.4s ease-in;
+    }
+  }
+  .library-song:hover {
+    background: rgba(82, 82, 82, 0.2);
+  }
+}
+@media screen and (max-width: 500px) {
+  .dark-mode-container {
+    height: 120px;
+    bottom: -60px;
+    svg {
+      font-size: 1.5em;
+    }
+  }
+  .dark-mode-container:hover {
+    svg {
+      font-size: 1.55em;
+    }
+  }
+}
