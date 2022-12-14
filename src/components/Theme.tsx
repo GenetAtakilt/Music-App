@@ -34,17 +34,14 @@ const ThemeSelector = ({
         if (darkMode === undefined) {
           localStorage.setItem('LightTheme', 'dark-mode');
           setDarkMode(true);
-          console.log(localStorage);
         }
         if (darkMode === true) {
           localStorage.setItem('LightTheme', 'light-mode');
           setDarkMode(false);
-          console.log(localStorage);
         }
         if (darkMode === false) {
           localStorage.setItem('LightTheme', 'dark-mode');
           setDarkMode(true);
-          console.log(localStorage);
         }
       };
     

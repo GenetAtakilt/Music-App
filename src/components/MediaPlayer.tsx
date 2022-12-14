@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 import React,{useState} from 'react';
 import {
   faPlay,
@@ -70,7 +69,6 @@ const dragHandler = (e: Change): void => {
 const skipTrackHandler = async (direction: string): Promise<void> => {
   const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
   if (direction === "next") {
-    console.log(songs[(currentIndex + 1) % songs.length]);
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
   }
